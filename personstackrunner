@@ -1,0 +1,17 @@
+
+public class PersonStackRunner 
+{
+	public static void main(String [] args)
+	{
+Person p1=new Person("Abhinav","001");
+Person p2=new Person("Mark","002");
+Person p3=new Person("nilesh","003");
+PersonStack stack=new PersonStack(2);
+stack.push(p1);
+stack.push(p2);
+stack.push(p3);
+
+stack.pop();
+stack.show();
+}
+}
