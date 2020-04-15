@@ -1,0 +1,71 @@
+
+public class sortMerge {
+
+	static int[] mergesort(int[] arr)
+	{	if(arr.length<=1)
+		return arr;
+	else
+	{
+		int mid=arr.length/2;
+		int[] left=new int[mid];
+		int[] right;
+		if(arr.length%2 == 0)
+			right=new int[mid];
+		else
+			right=new int[mid+1];
+		for(int i=0;i<left.length;i++)
+		{
+			left[i]=arr[i];
+		}
+		for(int j=0;j<right.length;j++)
+		{
+			right[j]=arr[mid+j];
+		}
+		left=mergesort(left);
+		right=mergesort(right);
+		int[] result = new int[left.length + right.length];
+		result=merge(left,right);
+		return result;
+		
+	}
+		
+		
+	}
+
+	private static int[] merge(int[] left, int[] right)
+	{ int l,r,f;
+	int[] fin=new int[left.length + right.length];
+	l=r=f=0;
+	
+	while(l<left.length || r<right.length)
+	{
+		if(l<left.length && r<right.length)
+		{
+			if(left[l]<right[r])
+				fin[f++]=left[l++];
+			else
+				fin[f++]=right[r++];
+		}
+		else if(l<left.length)
+		{
+			fin[f++]=left[l++];
+		}
+		else if(r<right.length)
+		{
+			fin[f++]=right[r++];	
+		}
+	}
+		return fin;
+	}
+
+	public static void main(String[] args) {
+		int a[]= {4,3,6,5,2,9,1,7,8};
+		int[] sorted= mergesort(a);
+		System.out.print("the sorted array using merge sort algorithm is ");
+		for(int i=0;i<sorted.length;i++)
+		{
+			System.out.print(sorted[i]+" ");
+		}
+		}
+
+}
