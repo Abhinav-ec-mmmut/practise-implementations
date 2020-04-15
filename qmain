@@ -1,0 +1,25 @@
+
+public class qmain {
+
+	public static void main(String[] args) {
+		intq q=new intq(5);
+		System.out.println(q.isFull());
+		q.enq(1);
+		q.enq(2);
+		q.enq(3);
+		q.enq(4);
+		q.enq(5);
+		System.out.println(q.isFull());	
+		q.showAll();
+		q.deq();
+		q.deq();
+		q.enq(6);
+		q.enq(7);
+		System.out.println();
+		System.out.println(q.isFull());
+		q.showAll();
+		
+
+	}
+
+}
