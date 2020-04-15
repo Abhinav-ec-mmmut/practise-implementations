@@ -1,0 +1,14 @@
+
+public class hello {
+
+	public static void main(String[] args) {
+		System.out.println("hello world this x64 based ");
+	String[] word= {"hello","buffalo","kilo","gadhedo","damarnutukdo"};
+	for(String w: word)
+	{	
+		if(w.endsWith("o"))
+		System.out.println("the word is "+w);
+	}
+	}
+
+}
