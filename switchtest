@@ -1,0 +1,19 @@
+
+public class switchtest 
+{
+	public static void main(String[] args)
+	{
+		String s="vivek";
+		switch(s)
+		{
+		case "vivek":
+		{
+			System.out.println("working");
+			break;
+		}
+		default:
+			System.out.println(" not working");
+		}
+	}
+
+}
