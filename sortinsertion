@@ -1,0 +1,29 @@
+
+public class sortInsertion {
+	
+	static int[] inssort(int[] arr)
+	{	for(int i=1;i<arr.length;i++)
+	{	int j=i;
+		while(j>0 && arr[j]<arr[j-1])
+		{
+		int temp=arr[j];
+		arr[j]=arr[j-1];
+		arr[j-1]=temp;
+		j--;
+		}
+		
+	}
+		return arr;
+	}
+
+	public static void main(String[] args) {
+		int a[]= {4,3,6,5,2,9,1,7,8};
+		int[] sorted= inssort(a);
+		System.out.print("the sorted array using insertion sort algorithm is ");
+		for(int i=0;i<sorted.length;i++)
+		{
+			System.out.print(sorted[i]+" ");
+		}
+		}
+
+}
