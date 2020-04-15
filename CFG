@@ -1,0 +1,17 @@
+import java.util.HashSet;
+
+public class CFG {
+	public static void main(String[] args)
+	{
+		HashSet<String> h=new HashSet<>();
+		h.add("ab");
+		h.add("aaaaaaaaaaaabhin");
+		HashSet<String> hd=new HashSet<>();
+		hd.add("a");
+		hd.add("b");
+		hd.add("a");
+		hd.addAll(h);
+		System.out.println(hd);
+	}
+
+}
