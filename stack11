@@ -1,0 +1,58 @@
+
+public class stackll {
+	stacknode root;
+	 class stacknode
+	 {
+		 int data;
+		 stacknode next;
+		 
+		 stacknode(int d)
+		 {
+			 data=d;
+			 next=null;
+		 }
+	 }
+	 boolean isEmpty()
+	 {
+		 if(root==null)
+			 return true;
+		 else
+			 return false;
+	 }
+	 boolean push(int d)
+	 {
+		 stacknode newnode=new stacknode(d);
+		if(root==null)
+			{
+			root=newnode;
+					return true;
+			}
+		else
+		{	stacknode temp= root;
+			root=newnode;
+			root.next=temp;
+			return true;
+		}
+	 }
+	 void peek()
+	 {
+		 if(root==null)
+		 System.out.println("stack is empty");
+		 else
+			 System.out.println(root.data);
+	 }
+
+	public static void main(String[] args) {
+		stackll stack=new stackll();
+		System.out.println(stack.isEmpty());
+		stack.push(1);
+		stack.peek();
+		System.out.println(stack.push(2));
+		System.out.println(stack.push(3));
+		stack.push(4);
+		stack.peek();
+		stack.push(5);
+		stack.peek();
+	}
+
+}
